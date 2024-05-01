@@ -22,25 +22,12 @@ Pytorch implementation of HighRes-net, a neural network for multi frame super-re
 ### Hardware:
 The default config should work on a machine with:
 
-GPU: Nvidia Tesla v100, memory 32G
+GPU: Nvidia gtx 1650, memory 8Gb
 
 Driver version: CUDA 10.0
 
-CPU: memory 8G to enable running jupyter notebook server and tensorboard server
-
-If your available GPU memory is less than 32G, try following to reduce the memory usage
-
-(1) Work with smaller batches (`batch_size` in config.json)
-
-(2) Work with less low-res views (`n_views` and `min_L` in config.json, `min_L` is minimum number of views (`n_views`)) 
-
-According to our experiments, we estimated the memory consumption (in GB) given `batch_size` and `n_views` 
 
 
-|   `batch_size` \ `n_views` and `min_L`|**32**| **16**| **4**|
-| ----------- |:------:| -----:|  -----:|
-| **32** | 27 | 15 | 6|
-| **16** | 15 | 8 | 4 |
 
 
 
